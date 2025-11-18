@@ -22,26 +22,30 @@
 }
 
 body {
+ body {
   margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+  font-family: ...;
   color: var(--text-main);
   background: linear-gradient(145deg, var(--bg-gradient-1), var(--bg-gradient-2));
   min-height: 100vh;
   overflow: hidden;
 }
+ 
+}
 
 /* Background floating blobs */
 .app-bg-animation {
   position: fixed;
-  inset: -40%;
-  background:
-    radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.25), transparent 55%),
-    radial-gradient(circle at 80% 10%, rgba(255, 0, 110, 0.22), transparent 60%),
-    radial-gradient(circle at 20% 90%, rgba(255, 190, 11, 0.25), transparent 55%),
-    radial-gradient(circle at 90% 80%, rgba(131, 56, 236, 0.25), transparent 55%);
-  filter: blur(0);
+  inset: 0;
+  background-image:
+    linear-gradient(145deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.25)),
+    url("airlie-beach-bg.jpg");   /* <- your background file */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   z-index: -1;
-  animation: float-bg 40s linear infinite alternate;
+}
+
 }
 
 @keyframes float-bg {
