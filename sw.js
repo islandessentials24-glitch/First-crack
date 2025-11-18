@@ -6,7 +6,7 @@ const ASSETS = [
   "/app.js",
   "/content-config.js",
   "/manifest.webmanifest"
-  // Add icons and key images if you want offline access to them too
+  // Add".Islandlog-highres.jpg", "Gringos.jpeg"
 ];
 
 self.addEventListener("install", event => {
