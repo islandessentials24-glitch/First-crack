@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Island Essentials</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- PWA manifest -->
+  <link rel="manifest" href="manifest.webmanifest" />
+  <meta name="theme-color" content="#00b4d8" />
+
+  <!-- Icons (replace with your own if you like) -->
+  <link rel="icon" href="img/icon-192.png" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <script defer src="content-config.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <div class="app-bg-animation"></div>
+
+  <header class="app-header">
+    <div class="logo-bounce">
+      <img id="primary-logo" src="" alt="Island Essentials logo" />
+    </div>
+    <div class="header-text">
+      <h1 id="brand-name"></h1>
+      <p id="brand-tagline"></p>
+    </div>
+  </header>
+
+  <main>
+    <!-- TABS -->
+    <section id="tab-today" class="tab-screen active">
+      <h2>Today</h2>
+      <div class="card highlight">
+        <p id="today-message" class="today-message"></p>
+        <p id="today-location" class="today-location"></p>
+        <p id="today-time" class="today-time"></p>
+        <a id="today-map-link" class="btn primary" target="_blank">Open in Maps</a>
+      </div>
+    </section>
+
+    <section id="tab-menu" class="tab-screen">
+      <h2>Menu</h2>
+      <div id="menu-container"></div>
+    </section>
+
+    <section id="tab-events" class="tab-screen">
+      <h2>Upcoming Events</h2>
+      <div id="events-container"></div>
+    </section>
+
+    <section id="tab-gallery" class="tab-screen">
+      <h2>Gallery</h2>
+      <div id="gallery-container" class="gallery-grid"></div>
+    </section>
+
+    <section id="tab-contact" class="tab-screen">
+      <h2>Contact & Catering</h2>
+      <div class="card">
+        <p id="contact-blurb"></p>
+        <div class="contact-buttons">
+          <a id="contact-phone" class="btn pill">Call</a>
+          <a id="contact-email" class="btn pill">Email</a>
+          <a id="contact-instagram" class="btn pill">Instagram</a>
+          <a id="contact-facebook" class="btn pill">Facebook</a>
+          <a id="contact-reviews" class="btn pill">Leave a Review</a>
+        </div>
+      </div>
+
+      <div class="card soft">
+        <h3 id="loyalty-title"></h3>
+        <p id="loyalty-text"></p>
+        <p id="loyalty-note" class="note"></p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Bottom Nav -->
+  <nav class="bottom-nav">
+    <button class="nav-btn active" data-tab="tab-today">Today</button>
+    <button class="nav-btn" data-tab="tab-menu">Menu</button>
+    <button class="nav-btn" data-tab="tab-events">Events</button>
+    <button class="nav-btn" data-tab="tab-gallery">Gallery</button>
+    <button class="nav-btn" data-tab="tab-contact">Contact</button>
+  </nav>
+</body>
+</html>
