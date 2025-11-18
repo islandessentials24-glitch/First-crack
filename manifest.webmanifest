@@ -1,7 +1,7 @@
 {
   "name": "Island Essentials",
   "short_name": "Island Essentials",
-  "start_url": "/index.html",
+  "start_url": "index.html",
   "display": "standalone",
   "background_color": "#00b4d8",
   "theme_color": "#00b4d8",
