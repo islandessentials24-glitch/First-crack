@@ -11,9 +11,9 @@ const IslandAppConfig = {
 
   today: {
     message: "We’re serving tonight!",
-    locationName: "@ Shirtfront Solutions, MacArthur Dr, Cannonvale",
+    locationName: "@ Whitcool, Cannonvale",
     time: "5:00pm – 8:00pm",
-    mapLink: "https://maps.app.goo.gl/xxxxx" // paste actual Google Maps link
+    mapLink: "https://maps.app.goo.gl/SZSyC33pt1jYmjBM9"
   },
 
   menu: [
@@ -21,8 +21,8 @@ const IslandAppConfig = {
       category: "Tacos",
       emoji: "🌮",
       items: [
-        { name: "Gringo’s Chicken Taco", price: "$7", desc: "Slow marinated chicken, slaw, Island Essentials sauce." },
-        { name: "Beef Brisket Taco",    price: "$8", desc: "Low’n’slow beef brisket, charred corn, chipotle mayo." },
+        { name: "Gringo’s Chicken Taco", price: "$12", desc: "Slow marinated chicken, Charred corn, Island Essentials sauce." },
+        { name: "Beef Brisket Taco",    price: "$12", desc: "Low’n’slow beef brisket, charred corn, chipotle mayo." },
         { name: "2 x Taco Meal",       price: "$12", desc: "Any 2 tacos, pure happiness." },
         { name: "Taco Meal + Drink",   price: "$15", desc: "2 x tacos + soft drink." }
       ]
@@ -31,8 +31,9 @@ const IslandAppConfig = {
       category: "Pasta & Mains",
       emoji: "🍝",
       items: [
-        { name: "Lasagna",       price: "$16", desc: "House-made, layered, cheesy, proper comfort food." },
-        { name: "Beef Bolognese", price: "$15", desc: "Slow-cooked sauce, al dente pasta, parm on top." },
+        { name: "Lasagna",       price: "$17", desc: "House-made, layered, cheesy, proper comfort food." },
+        { name: " Family Lasagna", price: "$25", desc: " House made, layered, cheesey, comfort food."},
+        { name: "Spaghetti Bolognese", price: "$15", desc: "Slow-cooked sauce, al dente pasta, parm on top." },
         { name: "Sunday Roast (special)", price: "TBA", desc: "Check socials or ‘Today’ screen for details." }
       ]
     },
