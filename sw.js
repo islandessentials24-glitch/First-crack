@@ -1,11 +1,11 @@
 const CACHE_NAME = "island-essentials-v1";
 const ASSETS = [
   "/",
-  "/index.html",
-  "/styles.css",
-  "/app.js",
-  "/content-config.js",
-  "/manifest.webmanifest"
+  "./index.html",
+  "./styles.css",
+  "./app.js",
+  "./content-config.js",
+  "./manifest.webmanifest"
   // Add".Islandlog-highres.jpg", "Gringos.jpeg"
 ];
 
