@@ -21,8 +21,8 @@ const IslandAppConfig = {
       category: "Tacos",
       emoji: "🌮",
       items: [
-        { name: "Gringo’s Chicken Taco", price: "$12", desc: "Slow marinated chicken, Charred corn, Island Essentials sauce." },
-        { name: "Beef Brisket Taco",    price: "$12", desc: "Low’n’slow beef brisket, charred corn, chipotle mayo." },
+        { name: "Gringo’s Chicken Taco", price: "$6", desc: "Slow marinated chicken, Charred corn, Island Essentials sauce." },
+        { name: "Beef Brisket Taco",    price: "$6", desc: "Low’n’slow beef brisket, charred corn, Island Essentials sauce." },
         { name: "2 x Taco Meal",       price: "$12", desc: "Any 2 tacos, pure happiness." },
         { name: "Taco Meal + Drink",   price: "$15", desc: "2 x tacos + soft drink." }
       ]
