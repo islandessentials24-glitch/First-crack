@@ -5,8 +5,8 @@ const IslandAppConfig = {
   brand: {
     name: "Island Essentials",
     tagline: "Whitsunday Tacos, Pasta & Good Vibes",
-    primaryLogo: "Island-Log-high-res.jpg", // replace with your file
-    accentLogo: "Gringos.jpeg"       // optional second logo or remove
+    primaryLogo: "img/Island-Log-high-res.jpg", // replace with your file
+    accentLogo: "img/Gringos.jpeg"       // optional second logo or remove
   },
 
   today: {
