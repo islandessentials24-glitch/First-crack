@@ -8,20 +8,36 @@ document.addEventListener("DOMContentLoaded", () => {
   if (cfg.brand.primaryLogo) logoEl.src = cfg.brand.primaryLogo;
 
   // Today
-    // MULTI-SESSION TODAY DISPLAY
-const todayContainer = document.querySelector("#tab-today");
-todayContainer.innerHTML = "<h2>Today</h2>"; // rebuild section
+  // TODAY SECTION – SUPPORT MULTIPLE SESSIONS (LUNCH + DINNER ETC.)
+const todaySection = document.querySelector("#tab-today");
 
-cfg.today.sessions.forEach(session => {
+// clear whatever was in there and rebuild it
+todaySection.innerHTML = "<h2>Today</h2>";
+
+if (cfg.today.sessions && cfg.today.sessions.length) {
+  cfg.today.sessions.forEach(session => {
     const card = document.createElement("div");
     card.className = "card highlight";
 
     card.innerHTML = `
-        <h3>${session.title}</h3>
-        <p class="today-message">${session.message}</p>
-        <p class="today-location">${session.locationName}</p>
-        <p class="today-time">${session.time}</p>
-        <a class="btn primary" target="_blank" href="${session.mapLink}">Open in Maps</a>
+      <h3>${session.title}</h3>
+      <p class="today-message">${session.message}</p>
+      <p class="today-location">${session.locationName}</p>
+      <p class="today-time">${session.time}</p>
+      <a class="btn primary" target="_blank" href="${session.mapLink}">
+        Open in Maps
+      </a>
+    `;
+
+    todaySection.appendChild(card);
+  });
+} else {
+  // fallback in case sessions isn't set
+  const msg = document.createElement("p");
+  msg.textContent = "No sessions set for today yet.";
+  todaySection.appendChild(msg);
+}
+
     `;
 
     todayContainer.appendChild(card);
