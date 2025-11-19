@@ -1,3 +1,9 @@
+h2 {
+  color: #ff8a00; /* your colour here */
+  text-shadow: 0 2px 5px rgba(0,0,0,0.4);
+  font-weight: 700;
+}
+
 :root {
   --bg-gradient-1: #00b4d8;
   --bg-gradient-2: #90e0ef;
