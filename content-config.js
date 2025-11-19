@@ -10,9 +10,9 @@ const IslandAppConfig = {
   },
 
   today: {
-    message: "We’re serving tonight!",
-    locationName: "@ Whitcool, Cannonvale",
-    time: "5:00pm – 8:00pm",
+    message: "We’re serving tonight!, All about the Tacos baby",
+    locationName: "@ Whitcool, Cannonvale,",
+    time: "10:00am – 2:00pm",
     mapLink: "https://maps.app.goo.gl/SZSyC33pt1jYmjBM9"
   },
 
