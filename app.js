@@ -1,17 +1,19 @@
+// Island Essentials app main script
+
 document.addEventListener("DOMContentLoaded", () => {
   const cfg = IslandAppConfig;
 
-  // Header
+  // ===== HEADER =====
   document.getElementById("brand-name").textContent = cfg.brand.name;
   document.getElementById("brand-tagline").textContent = cfg.brand.tagline;
   const logoEl = document.getElementById("primary-logo");
   if (cfg.brand.primaryLogo) logoEl.src = cfg.brand.primaryLogo;
 
-  // TODAY SECTION – MULTIPLE SESSIONS (SMOKO & LUNCH + DINNER)
+  // ===== TODAY – MULTIPLE SESSIONS (LUNCH + DINNER) =====
   const todayContainer = document.getElementById("today-container");
 
-  if (cfg.today.sessions && cfg.today.sessions.length) {
-    cfg.today.sessions.forEach(session => {
+  if (cfg.today && cfg.today.sessions && cfg.today.sessions.length) {
+    cfg.today.sessions.forEach((session) => {
       const card = document.createElement("div");
       card.className = "card highlight";
 
@@ -49,22 +51,9 @@ document.addEventListener("DOMContentLoaded", () => {
     todayContainer.appendChild(msg);
   }
 
-  });
-} else {
-  // fallback in case sessions isn't set
-  const msg = document.createElement("p");
-  msg.textContent = "No sessions set for today yet.";
-  todaySection.appendChild(msg);
-}
-
-    `;
-
-    todayContainer.appendChild(card);
-});
-
-  // Menu
+  // ===== MENU =====
   const menuContainer = document.getElementById("menu-container");
-  cfg.menu.forEach(cat => {
+  cfg.menu.forEach((cat) => {
     const card = document.createElement("div");
     card.className = "card menu-category";
 
@@ -79,10 +68,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     header.appendChild(emojiSpan);
     header.appendChild(title);
-
     card.appendChild(header);
 
-    cat.items.forEach(item => {
+    cat.items.forEach((item) => {
       const row = document.createElement("div");
       row.className = "menu-item";
 
@@ -110,13 +98,13 @@ document.addEventListener("DOMContentLoaded", () => {
     menuContainer.appendChild(card);
   });
 
-  // Events
+  // ===== EVENTS =====
   const eventsContainer = document.getElementById("events-container");
   if (cfg.events && cfg.events.length) {
     cfg.events
       .slice()
       .sort((a, b) => a.date.localeCompare(b.date))
-      .forEach(ev => {
+      .forEach((ev) => {
         const card = document.createElement("div");
         card.className = "card event-item";
 
@@ -155,10 +143,10 @@ document.addEventListener("DOMContentLoaded", () => {
     eventsContainer.appendChild(msg);
   }
 
-  // Gallery
+  // ===== GALLERY =====
   const galleryContainer = document.getElementById("gallery-container");
   if (cfg.gallery && cfg.gallery.length) {
-    cfg.gallery.forEach(src => {
+    cfg.gallery.forEach((src) => {
       const img = document.createElement("img");
       img.src = src;
       img.alt = "Island Essentials";
@@ -166,11 +154,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   } else {
     const msg = document.createElement("p");
-    msg.textContent = "Photos coming soon – we’re still snapping the good stuff.";
+    msg.textContent =
+      "Photos coming soon – we’re still snapping the good stuff.";
     galleryContainer.appendChild(msg);
   }
 
-  // Contact & Loyalty
+  // ===== CONTACT & LOYALTY =====
   document.getElementById("contact-blurb").textContent = cfg.contact.blurb;
 
   const phoneBtn = document.getElementById("contact-phone");
@@ -187,38 +176,38 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("loyalty-text").textContent = cfg.loyalty.text;
   document.getElementById("loyalty-note").textContent = cfg.loyalty.note;
 
-  // Tabs
+  // ===== TABS / NAV =====
   const navButtons = document.querySelectorAll(".nav-btn");
   const screens = document.querySelectorAll(".tab-screen");
 
-  navButtons.forEach(btn => {
+  navButtons.forEach((btn) => {
     btn.addEventListener("click", () => {
       const target = btn.dataset.tab;
 
-      navButtons.forEach(b => b.classList.remove("active"));
+      navButtons.forEach((b) => b.classList.remove("active"));
       btn.classList.add("active");
 
-      screens.forEach(s => {
+      screens.forEach((s) => {
         s.classList.toggle("active", s.id === target);
       });
     });
   });
 
-  // PWA service worker
+  // ===== SERVICE WORKER (PWA) =====
   if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("sw.js").catch(err =>
-      console.error("SW registration failed", err)
-    );
+    navigator.serviceWorker
+      .register("sw.js")
+      .catch((err) => console.error("SW registration failed", err));
   }
 });
 
+// Helper: nice date format
 function formatDate(isoDate) {
-  // Basic pretty date: "2025-11-22" -> "22 Nov 2025"
   const d = new Date(isoDate + "T00:00:00");
   if (isNaN(d.getTime())) return isoDate;
   return d.toLocaleDateString("en-AU", {
     day: "2-digit",
     month: "short",
-    year: "numeric"
+    year: "numeric",
   });
 }
