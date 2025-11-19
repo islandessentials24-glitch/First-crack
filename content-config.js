@@ -9,7 +9,7 @@ const IslandAppConfig = {
     accentLogo: "img/Gringos.jpeg"       // optional second logo or remove
   },
 
-    today: {
+   today: {
     sessions: [
       {
         title: "Smoko & Lunch",
@@ -27,6 +27,7 @@ const IslandAppConfig = {
       }
     ]
   },
+ 
 
   menu: [
     // (your menu items stay as they were from here down)
