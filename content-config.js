@@ -73,7 +73,7 @@ const IslandAppConfig = {
     "Island-Log-high-res.jpg",
     "Gringos.jpeg",
     "Barrys-BBQ.png",
-    "img/stall-1.jpg"
+    "Barrysburninlove.png"
     // Add more as you take photos
   ],
 
