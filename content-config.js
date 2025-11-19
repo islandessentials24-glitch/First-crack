@@ -72,7 +72,7 @@ const IslandAppConfig = {
   gallery: [
     "Island-Log-high-res.jpg",
     "Gringos.jpeg",
-    "img/pasta-1.jpg",
+    "Barrys-BBQ.png",
     "img/stall-1.jpg"
     // Add more as you take photos
   ],
