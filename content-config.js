@@ -10,24 +10,24 @@ const IslandAppConfig = {
   },
 
   today: {
-      sessions: [
-              {
-                 title: "Lunch Service",
-     
-                 message: "We’re serving today!, All about the Tacos baby- see Taco Menu🌮 ",
-                 locationName: "@ Whitcool, Cannonvale,",
-                 time: "10:00am – 2:00pm",
-                 mapLink: "https://maps.app.goo.gl/SZSyC33pt1jYmjBM9"
-    },
+    sessions: [
         {
-                 title: "Dinner Time",
-                 message: "We’re serving dinner tonight!-I must Pasta you a question- See Pasta menu🍝 ",
-                 locationName: "@ Big 4 Adventure Park, Airlie Beach",
-                 time: "5:00pm – 8:00pm",
-                 mapLink: "https://maps.app.goo.gl/VNaM9aQGz1pZ6zMw9"
+            title: "Smoko & Lunch ",
+            message: "We're serving lunch today! Taco time Baby!- see Taco menu ",
+            locationName: "@ Whitcool, Cannonvale",
+            time: "10:00am – 2:00pm",
+            mapLink: "https://maps.app.goo.gl/rpSWd9oonz9c7Cbd7"
+        },
+        {
+            title: "Dinner Time-  ",
+            message: "We’re serving dinner tonight! I must Pasta you a question!!- see Pasta menu",
+            locationName: "@ New Location, Airlie Beach",
+            time: "5:00pm – 8:00pm",
+            mapLink: "https://maps.app.goo.gl/VNaM9aQGz1pZ6zMw9"
         }
     ]
 },
+
  
     
   },
