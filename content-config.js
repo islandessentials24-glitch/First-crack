@@ -42,9 +42,9 @@ const IslandAppConfig = {
       emoji: "🔥",
       items: [
         { name: "Barry’s BBQ Sauce",  price: "$10", desc: "Legendary sauce in a bottle." },
-        { name: "Slap-Your-Barry Rub", price: "$8", desc: "House spice mix for meat & veg." },
-        { name: "Stubby Holder",      price: "$12", desc: "Island Essentials stubby holder." },
-        { name: "T-Shirt / Hat",      price: "from $25", desc: "Ask at the stand for sizes & colours." }
+        { name: "Barry's Burnin Love Rub", price: "$8", desc: "House spice mix for meat & veg." },
+        { name: "Stubby Holder",      price: "TBA- Coming soon", desc: "Island Essentials stubby holder." },
+        { name: "T-Shirt / Hat",      price: "TBA-Coming soon", desc: "Ask at the stand for sizes & colours." }
       ]
     }
   ],
