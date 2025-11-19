@@ -14,11 +14,7 @@ const IslandAppConfig = {
     locationName: "@ Whitcool, Cannonvale,",
     time: "10:00am – 2:00pm",
     mapLink: "https://maps.app.goo.gl/SZSyC33pt1jYmjBM9"
- tonight: {
-    message: "We’re doing dinner!, I must Pasta you a question!! see pasta menu🍝 ",
-    locationName: "@ Big 4 Adventure park, Cannonvale,",
-    time: "5:00pm – 8:00pm",
-    mapLink: "https://maps.app.goo.gl/VNaM9aQGz1pZ6zMw9"
+ 
     
   },
 
