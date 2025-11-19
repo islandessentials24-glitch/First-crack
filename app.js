@@ -7,29 +7,48 @@ document.addEventListener("DOMContentLoaded", () => {
   const logoEl = document.getElementById("primary-logo");
   if (cfg.brand.primaryLogo) logoEl.src = cfg.brand.primaryLogo;
 
-  // Today
-  // TODAY SECTION – SUPPORT MULTIPLE SESSIONS (LUNCH + DINNER ETC.)
-const todaySection = document.querySelector("#tab-today");
+  // TODAY SECTION – MULTIPLE SESSIONS (SMOKO & LUNCH + DINNER)
+  const todayContainer = document.getElementById("today-container");
 
-// clear whatever was in there and rebuild it
-todaySection.innerHTML = "<h2>Today</h2>";
+  if (cfg.today.sessions && cfg.today.sessions.length) {
+    cfg.today.sessions.forEach(session => {
+      const card = document.createElement("div");
+      card.className = "card highlight";
 
-if (cfg.today.sessions && cfg.today.sessions.length) {
-  cfg.today.sessions.forEach(session => {
-    const card = document.createElement("div");
-    card.className = "card highlight";
+      const titleEl = document.createElement("h3");
+      titleEl.textContent = session.title;
+      card.appendChild(titleEl);
 
-    card.innerHTML = `
-      <h3>${session.title}</h3>
-      <p class="today-message">${session.message}</p>
-      <p class="today-location">${session.locationName}</p>
-      <p class="today-time">${session.time}</p>
-      <a class="btn primary" target="_blank" href="${session.mapLink}">
-        Open in Maps
-      </a>
-    `;
+      const msgEl = document.createElement("p");
+      msgEl.className = "today-message";
+      msgEl.textContent = session.message;
+      card.appendChild(msgEl);
 
-    todaySection.appendChild(card);
+      const locEl = document.createElement("p");
+      locEl.className = "today-location";
+      locEl.textContent = session.locationName;
+      card.appendChild(locEl);
+
+      const timeEl = document.createElement("p");
+      timeEl.className = "today-time";
+      timeEl.textContent = session.time;
+      card.appendChild(timeEl);
+
+      const mapBtn = document.createElement("a");
+      mapBtn.className = "btn primary";
+      mapBtn.target = "_blank";
+      mapBtn.href = session.mapLink;
+      mapBtn.textContent = "Open in Maps";
+      card.appendChild(mapBtn);
+
+      todayContainer.appendChild(card);
+    });
+  } else {
+    const msg = document.createElement("p");
+    msg.textContent = "No sessions set for today yet.";
+    todayContainer.appendChild(msg);
+  }
+
   });
 } else {
   // fallback in case sessions isn't set
