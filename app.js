@@ -8,10 +8,24 @@ document.addEventListener("DOMContentLoaded", () => {
   if (cfg.brand.primaryLogo) logoEl.src = cfg.brand.primaryLogo;
 
   // Today
-  document.getElementById("today-message").textContent = cfg.today.message;
-  document.getElementById("today-location").textContent = cfg.today.locationName;
-  document.getElementById("today-time").textContent = cfg.today.time;
-  document.getElementById("today-map-link").href = cfg.today.mapLink;
+    // MULTI-SESSION TODAY DISPLAY
+const todayContainer = document.querySelector("#tab-today");
+todayContainer.innerHTML = "<h2>Today</h2>"; // rebuild section
+
+cfg.today.sessions.forEach(session => {
+    const card = document.createElement("div");
+    card.className = "card highlight";
+
+    card.innerHTML = `
+        <h3>${session.title}</h3>
+        <p class="today-message">${session.message}</p>
+        <p class="today-location">${session.locationName}</p>
+        <p class="today-time">${session.time}</p>
+        <a class="btn primary" target="_blank" href="${session.mapLink}">Open in Maps</a>
+    `;
+
+    todayContainer.appendChild(card);
+});
 
   // Menu
   const menuContainer = document.getElementById("menu-container");
