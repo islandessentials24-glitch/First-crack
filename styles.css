@@ -229,21 +229,31 @@ main {
 .event-power {
   font-size: 0.8rem;
 }
-
-/* Gallery */
+/* Mobile-first: full width images */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  padding: 0 8px;
 }
 
 .gallery-grid img {
   width: 100%;
-  border-radius: 16px;
+  height: auto;
+  border-radius: 18px;
   box-shadow: var(--shadow-card);
-  object-fit: cover;
-  height: 120px;
-  transition: transform var(--transition-med), box-shadow var(--transition-med);
+  object-fit: contain; /* shows whole picture clearly */
+  background: rgba(255, 255, 255, 0.9); /* helps logos stand out */
+  padding: 10px; /* adds breathing room around each picture */
+}
+
+/* Larger screens (like your desktop): show 2 columns */
+@media (min-width: 700px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 }
 
 .gallery-grid img:hover {
