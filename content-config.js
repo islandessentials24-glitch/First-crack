@@ -59,6 +59,7 @@ const IslandAppConfig = {
       items: [
         { name: "Barry’s BBQ Sauce",  price: "$10", desc: "Legendary sauce in a bottle." },
         { name: "Barry's Burnin Love Rub", price: "$8", desc: "House spice mix for meat & veg." },
+        { name: "Gringos Taco Seasoning", price: "$5" , desc: "Gringos Official Taco seasoning." },
         { name: "Stubby Holder",      price: "TBA- Coming soon", desc: "Island Essentials stubby holder." },
         { name: "T-Shirt / Hat",      price: "TBA-Coming soon", desc: "Ask at the stand for sizes & colours." }
       ]
