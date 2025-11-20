@@ -53,7 +53,33 @@ const IslandAppConfig = {
         { name: "Sunday Roast (special)", price: "TBA", desc: "Check socials or ‘Today’ screen for details." }
          ]
     },
-    {
+        {
+      category: "Meal Prep – Order and pick up or have delivered dinners for 1 night or the whole week!!",
+      emoji: "🥩",
+      items: [
+        {
+          name: "Roast, roasted vege and mouth-watering gravy",
+          price: "TBA",
+          desc: "House-made roast of your choice."
+        },
+        {
+          name: "Family Lasagna",
+          price: "$25",
+          desc: "House-made, layered, cheesy comfort food. 🍖🍗"
+        },
+        {
+          name: "Korean Chicken, vege and rice",
+          price: "TBA",
+          desc: "24hr marinated Korean chicken, steamed rice and vege 🥗."
+        },
+        {
+          name: "Variety of mouth-watering meals",
+          price: "TBA",
+          desc: "Rotated to keep it fresh and exciting."
+        }
+      ]
+    },
+{
      
       category: "Seasoning, Sauces & Merch",
       emoji: "🔥",
