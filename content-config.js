@@ -54,7 +54,7 @@ const IslandAppConfig = {
       ]
     },
     {
-      category: "Sauces & Merch",
+      category: "Seasoning, Sauces & Merch",
       emoji: "🔥",
       items: [
         { name: "Barry’s BBQ Sauce",  price: "$10", desc: "Legendary sauce in a bottle." },
