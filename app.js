@@ -19,15 +19,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const logoEl = document.getElementById("primary-logo");
   if (cfg.brand.primaryLogo) logoEl.src = cfg.brand.primaryLogo;
 
-  // (keep the rest of your existing code starting on the next line)
+  // 
 
-  // ===== HEADER =====
-  document.getElementById("brand-name").textContent = cfg.brand.name;
-  document.getElementById("brand-tagline").textContent = cfg.brand.tagline;
-  const logoEl = document.getElementById("primary-logo");
-  if (cfg.brand.primaryLogo) logoEl.src = cfg.brand.primaryLogo;
-
-});
+ 
 
 
 
@@ -231,7 +225,9 @@ function formatDate(isoDate) {
   return d.toLocaleDateString("en-AU", {
     day: "2-digit",
     month: "short",
-    year: "numeric",
+        year: "numeric",
   });
 }
+
 });
+
