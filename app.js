@@ -1,7 +1,25 @@
 // Island Essentials app main script
 
+
+
+const API_BASE = "https://island-essentials-rise-of-the-gringo.onrender.com";
+
 document.addEventListener("DOMContentLoaded", () => {
- const API_BASE = "https://island-essentials-rise-of-the-gringo.onrender.com";
+ // ===== LOAD MENU FROM API =====
+fetch(`${API_BASE}/api/menu`)
+  .then((res) => res.json())
+  .then((menuData) => {
+    console.log("Menu loaded from API:", menuData);
+
+    // TODO: convert menuData into your display format
+    // Example if your function is renderMenu():
+    // renderMenu(menuData);
+
+  })
+  .catch((err) => console.error("Error loading menu:", err));
+
+  // ...rest of your code...
+});
 
 
   // ===== HEADER =====
