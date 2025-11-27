@@ -1,7 +1,8 @@
 // Island Essentials app main script
 
 document.addEventListener("DOMContentLoaded", () => {
-  const cfg = IslandAppConfig;
+ const API_BASE = "https://island-essentials-rise-of-the-gringo.onrender.com";
+
 
   // ===== HEADER =====
   document.getElementById("brand-name").textContent = cfg.brand.name;
