@@ -116,8 +116,8 @@ app.get("/", (req, res) => {
   res.send("Island Essentials API is running 🚀");
 });
 
-
 // Start server
 app.listen(PORT, () => {
   console.log(`Island Essentials API running on port ${PORT}`);
 });
+
