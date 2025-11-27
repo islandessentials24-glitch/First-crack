@@ -2,7 +2,6 @@
 
 const API_BASE = "https://island-essentials-rise-of-the-gringo.onrender.com";
 
-document.addEventListener("DOMContentLoaded", () => {
   // ===== LOAD MENU FROM API (for now just log it) =====
   fetch(`${API_BASE}/api/menu`)
     .then((res) => res.json())
@@ -193,7 +192,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("loyalty-text").textContent = cfg.loyalty.text;
   document.getElementById("loyalty-note").textContent = cfg.loyalty.note;
 
-  // ===== TABS / NAV =====
+   // ===== TABS / NAV =====
   const navButtons = document.querySelectorAll(".nav-btn");
   const screens = document.querySelectorAll(".tab-screen");
 
@@ -209,6 +208,26 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   });
+
+  // ===== SERVICE WORKER (PWA) =====
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker
+      .register("sw.js")
+      .catch((err) => console.error("SW registration failed", err));
+  }
+
+  // Helper: nice date format
+  function formatDate(isoDate) {
+    const d = new Date(isoDate + "T00:00:00");
+    if (isNaN(d.getTime())) return isoDate;
+    return d.toLocaleDateString("en-AU", {
+      day: "2-digit",
+      month: "short",
+      year: "numeric",
+    });
+  }
+}); // <-- this closes document.addEventListener("DOMContentLoaded", ...)
+
 
   // ===== SERVICE WORKER (PWA) =====
   if ("serviceWorker" in navigator) {
