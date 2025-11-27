@@ -2,7 +2,7 @@
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
-const path = require("path");
+
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -111,13 +111,11 @@ app.post("/api/enquiries", (req, res) => {
 
 // ---- FRONT-END (PWA) ----
 
-// serve static files from /public
-app.use(express.static("public"));
-
-// fallback: send index.html for any unknown route (so routing still works)
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "index.html"));
+// --- Simple root route just for sanity check ---
+app.get("/", (req, res) => {
+  res.send("Island Essentials API is running 🚀");
 });
+
 
 // Start server
 app.listen(PORT, () => {
