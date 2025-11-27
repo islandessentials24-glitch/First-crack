@@ -1,32 +1,36 @@
 // Island Essentials app main script
 
-
-
 const API_BASE = "https://island-essentials-rise-of-the-gringo.onrender.com";
 
 document.addEventListener("DOMContentLoaded", () => {
- // ===== LOAD MENU FROM API =====
-fetch(`${API_BASE}/api/menu`)
-  .then((res) => res.json())
-  .then((menuData) => {
-    console.log("Menu loaded from API:", menuData);
-
-    // TODO: convert menuData into your display format
-    // Example if your function is renderMenu():
-    // renderMenu(menuData);
-
-  })
-  .catch((err) => console.error("Error loading menu:", err));
-
-  // ...rest of your code...
-});
-
+  // ===== LOAD MENU FROM API (for now just log it) =====
+  fetch(`${API_BASE}/api/menu`)
+    .then((res) => res.json())
+    .then((menuData) => {
+      console.log("Menu from API:", menuData);
+      // Later: plug menuData into your menu rendering
+      // e.g. renderMenu(menuData);
+    })
+    .catch((err) => console.error("Error loading menu:", err));
 
   // ===== HEADER =====
   document.getElementById("brand-name").textContent = cfg.brand.name;
   document.getElementById("brand-tagline").textContent = cfg.brand.tagline;
   const logoEl = document.getElementById("primary-logo");
   if (cfg.brand.primaryLogo) logoEl.src = cfg.brand.primaryLogo;
+
+  // (keep the rest of your existing code starting on the next line)
+
+  // ===== HEADER =====
+  document.getElementById("brand-name").textContent = cfg.brand.name;
+  document.getElementById("brand-tagline").textContent = cfg.brand.tagline;
+  const logoEl = document.getElementById("primary-logo");
+  if (cfg.brand.primaryLogo) logoEl.src = cfg.brand.primaryLogo;
+
+});
+
+
+
 
   // ===== TODAY – MULTIPLE SESSIONS (LUNCH + DINNER) =====
   const todayContainer = document.getElementById("today-container");
@@ -230,3 +234,4 @@ function formatDate(isoDate) {
     year: "numeric",
   });
 }
+});
